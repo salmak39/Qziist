@@ -4,139 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs | Qziist</title>
+    <title>Sceintific Programs | Qziist</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .program-card {
-            background: white;
-            border-left: 4px solid var(--color-secondary);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow-sm);
-            border-radius: 0 var(--radius-md) var(--radius-md) 0;
-        }
-
-        .program-card h3 {
-            color: var(--color-primary);
-            margin-top: 0;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #e0f7fa;
-            color: #006064;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-    </style>
 </head>
 
 <body>
 
     <header class="main-header">
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/qzist-transparent.png" alt="Qziist Logo">
                 <span>Qziist</span>
             </a>
-            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             <nav class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
+                <a href="programs.html" class="nav-link active">Programs</a>
+                <a href="projects.html" class="nav-link">Research Projects</a>
+                <a href="game.html" class="nav-link">Game</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="programs.html" class="nav-link">Programs</a>
-                <a href="collaboration.html" class="nav-link">Collaboration</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="contact.html" class="nav-link btn btn-primary">Apply Now</a>
+                <a href="contact.html" class="nav-btn">Apply Now</a>
             </nav>
+            <button class="mobile-menu-btn" style="display:none;"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
+    <!-- Page Header -->
+    <div style="background:var(--color-primary); color:white; padding: 4rem 0;">
+        <div class="container">
+            <h1 style="font-size:2.5rem; margin-bottom:1rem;">Training & Research Programs</h1>
+            <p style="font-size:1.2rem; opacity:0.9; max-width:800px;">Develop real-world skills through our rigorous,
+                project-based curriculum designed for future scientists.</p>
+        </div>
+    </div>
+
     <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Research & Training Programs</h2>
-                <p>Comprehensive training modules aimed at developing real-world skills in bioinformatics and
-                    computational biology.</p>
-            </div>
-
-            <div class="program-card">
-                <h3><i class="fas fa-laptop-code" style="color: var(--color-secondary); margin-right: 10px;"></i>
-                    Project-Based Bioinformatics Training</h3>
-                <div style="margin: 1rem 0;">
-                    <span class="tag">MSc Students</span>
-                    <span class="tag">PhD Candidates</span>
-                    <span class="tag">Beginner to Advanced</span>
+            <div class="card-grid">
+                <!-- Program 1 -->
+                <div class="program-card">
+                    <div class="card-thumb">
+                        <img src="assets/images/thumb_training.png" alt="Bioinformatics Training">
+                    </div>
+                    <div class="card-body">
+                        <span class="org-label">Training Module</span>
+                        <h3 class="card-title">Bioinformatics & DNA Analysis</h3>
+                        <p class="card-desc">
+                            A structured learning path where students tackle specific biological problems using
+                            computational tools.
+                            Training covers sequence analysis, structural modeling, and data interpretation.
+                        </p>
+                        <div class="card-footer">
+                            <span>MSc & PhD Students</span>
+                            <span>Beginner - Advanced</span>
+                        </div>
+                    </div>
                 </div>
-                <p>
-                    A structured learning path where students tackle specific biological problems using computational
-                    tools.
-                    Training covers sequence analysis, structural modeling, and data interpretation.
-                </p>
-            </div>
 
-            <div class="program-card">
-                <h3><i class="fas fa-handshake" style="color: var(--color-secondary); margin-right: 10px;"></i>
-                    Collaborative Research Internship</h3>
-                <div style="margin: 1rem 0;">
-                    <span class="tag">Publication Track</span>
-                    <span class="tag">Mentorship</span>
-                    <span class="tag">Long-term</span>
+                <!-- Program 2 -->
+                <div class="program-card">
+                    <div class="card-thumb">
+                        <img src="assets/images/thumb_research.png" alt="Collaborative Research">
+                    </div>
+                    <div class="card-body">
+                        <span class="org-label">Research Internship</span>
+                        <h3 class="card-title">Collaborative Research Internship</h3>
+                        <p class="card-desc">
+                            Designed for students seeking authorship in scientific journals. Those who want to proceed
+                            with big questions.
+                            Selected candidates join ongoing research projects contributing to data generation and
+                            analysis.
+                        </p>
+                        <div class="card-footer">
+                            <span>Publication Track</span>
+                            <span>Mentorship</span>
+                        </div>
+                    </div>
                 </div>
-                <p>
-                    Designed for students seeking authorship in scientific journals. Those who want to proceed with big
-                    questions
-                    . Those who concern the future. Selected candidates join ongoing research projects, contributare
-                    concerned aboutdata generation, analysis, and
-                    manuscript eparation under expert supervision.
-                </p>
+
+                <!-- Program 3 (Game) -->
+                <div class="program-card">
+                    <div class="card-thumb"
+                        style="background:#ff9800; display:flex; align-items:center; justify-content:center;">
+                        <span style="font-size:4rem;">🍎</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="org-label">Outreach</span>
+                        <h3 class="card-title">Public Health Education</h3>
+                        <p class="card-desc">
+                            Gamified learning tools for younger audiences to promote nutritional literacy and health
+                            awareness.
+                        </p>
+                        <div class="card-footer">
+                            <span>Community</span>
+                            <span><a href="food-heroes-web/index.html" style="color:inherit;">Launch Tool <i
+                                        class="fas fa-external-link-alt"></i></a></span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="text-center" style="margin-top: 4rem;">
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Not sure which path is right for you?</p>
-                <a href="contact.html" class="btn btn-primary">Contact Us for Guidance</a>
+            <div style="margin-top:4rem; text-align:center;">
+                <h3 style="margin-bottom:1rem;">Looking for something specific?</h3>
+                <a href="contact.html" class="btn btn-secondary">Contact an Advisor</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Qziist</h3>
-                    <p>A premier research and training initiative dedicated to pharmaceutical biotechnology and
-                        bioinformatics.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="programs.html">Training Programs</a></li>
-                        <li><a href="projects.html">Publications</a></li>
-                        <li><a href="ethics.html">Research Ethics</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <ul class="footer-links">
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="hub.html">Knowledge Hub</a></li>
-                        <li><a href="mailto:info@qziist.com">info@qziist.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Qziist. All rights reserved. | Scientific Integrity First.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Qziist Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 

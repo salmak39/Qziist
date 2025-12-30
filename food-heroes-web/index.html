@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قهرمانان خوراکی - سفر به سیاره سلامتی</title>
+    <meta name="description" content="بازی آموزشی تغذیه سالم برای کودکان">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Stars Background -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="spaceship-icon">🚀</div>
+            <h1 class="game-title">قهرمانان خوراکی</h1>
+            <h2 class="game-subtitle">سفر به سیاره سلامتی</h2>
+            
+            <div class="character-select">
+                <p>نام کاپیتان خودت رو انتخاب کن:</p>
+                <input type="text" id="player-name" placeholder="مثلاً: آرش یا سارا" maxlength="15">
+            </div>
+            
+            <button id="start-btn" class="btn btn-primary">
+                <span>🚀</span> شروع ماموریت
+            </button>
+            
+            <div class="robo-sib">
+                <span class="robo-icon">🍎</span>
+                <div class="speech-bubble">
+                    <p>سلام! من <strong>روبو-سیب</strong> هستم، دستیار تو در این سفر!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="status-icon">⚡</span>
+                    <div class="progress-bar">
+                        <div id="energy-bar" class="progress-fill energy"></div>
+                    </div>
+                    <span class="status-label">انرژی</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">❤️</span>
+                    <div class="progress-bar">
+                        <div id="health-bar" class="progress-fill health"></div>
+                    </div>
+                    <span class="status-label">سلامتی</span>
+                </div>
+                <div class="scene-counter">
+                    صحنه <span id="scene-number">1</span> از 5
+                </div>
+            </div>
+
+            <!-- Scene Container -->
+            <div id="scene-container">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+
+            <!-- Robo-Sib Guide -->
+            <div class="robo-guide" id="robo-guide">
+                <span class="robo-icon">🍎</span>
+                <div class="guide-bubble" id="guide-text">
+                    <!-- Guide text will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div id="result-content">
+                <!-- Result will be shown here -->
+            </div>
+            <button id="next-btn" class="btn btn-primary">
+                <span>➡️</span> ادامه سفر
+            </button>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="screen">
+            <div class="trophy">🏆</div>
+            <h1 id="end-title">تبریک!</h1>
+            <p id="end-message"></p>
+            
+            <div class="final-stats">
+                <div class="stat-card">
+                    <span class="stat-icon">⚡</span>
+                    <span class="stat-value" id="final-energy">100%</span>
+                    <span class="stat-label">انرژی نهایی</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">❤️</span>
+                    <span class="stat-value" id="final-health">100%</span>
+                    <span class="stat-label">سلامتی نهایی</span>
+                </div>
+            </div>
+
+            <div class="lessons-learned">
+                <h3>📚 درس‌هایی که یاد گرفتی:</h3>
+                <ul id="lessons-list"></ul>
+            </div>
+
+            <button id="restart-btn" class="btn btn-secondary">
+                <span>🔄</span> بازی دوباره
+            </button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Folder Game | Qziist</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .game-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        #gameCanvas {
+            background: #f0f4f8;
+            border: 2px solid var(--color-primary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+        }
+
+        .score-board {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/qzist-transparent.png" alt="Qziist Logo">
+                <span>Qziist</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="game.html" class="nav-link active">Game</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Protein Catcher</h2>
+                <p>Catch the correct amino acids to build the protein chain! (Demo)</p>
+            </div>
+
+            <div class="game-container">
+                <div class="score-board">Score: <span id="score">0</span></div>
+                <canvas id="gameCanvas" width="600" height="400"></canvas>
+                <div style="margin-top: 1rem;">
+                    <button class="btn btn-primary" onclick="startGame()">Start Game</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        let score = 0;
+        let gameLoop;
+        let player = { x: 300, y: 350, width: 50, height: 50, color: '#0a192f' };
+        let fallingObjects = [];
+
+        function drawPlayer() {
+            ctx.fillStyle = player.color;
+            ctx.fillRect(player.x - player.width / 2, player.y - player.height / 2, player.width, player.height);
+        }
+
+        function drawObjects() {
+            fallingObjects.forEach(obj => {
+                ctx.beginPath();
+                ctx.arc(obj.x, obj.y, 10, 0, Math.PI * 2);
+                ctx.fillStyle = obj.type === 'good' ? '#00bcd4' : '#ff6b6b';
+                ctx.fill();
+                ctx.closePath();
+            });
+        }
+
+        function update() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Move objects
+            fallingObjects.forEach(obj => obj.y += 3);
+
+            // Check collision
+            fallingObjects = fallingObjects.filter(obj => {
+                if (obj.y > 400) return false; // Remove if off screen
+
+                // Simple collision detection
+                if (obj.y > player.y - player.height / 2 &&
+                    obj.y < player.y + player.height / 2 &&
+                    obj.x > player.x - player.width / 2 &&
+                    obj.x < player.x + player.width / 2) {
+
+                    if (obj.type === 'good') {
+                        score += 10;
+                    } else {
+                        score -= 5;
+                    }
+                    document.getElementById('score').innerText = score;
+                    return false; // Remove caught object
+                }
+                return true;
+            });
+
+            // Spawner
+            if (Math.random() < 0.05) {
+                fallingObjects.push({
+                    x: Math.random() * 580 + 10,
+                    y: 0,
+                    type: Math.random() > 0.3 ? 'good' : 'bad'
+                });
+            }
+
+            drawPlayer();
+            drawObjects();
+        }
+
+        function startGame() {
+            if (gameLoop) clearInterval(gameLoop);
+            score = 0;
+            fallingObjects = [];
+            gameLoop = setInterval(update, 1000 / 60);
+        }
+
+        // Mouse controls
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            player.x = e.clientX - rect.left;
+        });
+    </script>
+</body>
+
+</html>

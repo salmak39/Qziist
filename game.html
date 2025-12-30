@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Games | Qziist</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/qzist-transparent.png" alt="Qziist Logo">
+                <span>Qziist</span>
+            </a>
+            <nav class="nav-links">
+                <a href="programs.html" class="nav-link">Programs</a>
+                <a href="projects.html" class="nav-link">Research Projects</a>
+                <a href="game.html" class="nav-link active">Game</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-btn">Apply Now</a>
+            </nav>
+            <button class="mobile-menu-btn" style="display:none;"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <div style="background:var(--color-primary); color:white; padding: 4rem 0;">
+        <div class="container">
+            <h1 style="font-size:2.5rem; margin-bottom:1rem;">Interactive Learning</h1>
+            <p style="font-size:1.2rem; opacity:0.9; max-width:800px;">Explore scientific concepts through gamified
+                simulations and educational tools.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="card-grid">
+                <!-- Food Heroes Game -->
+                <a href="food-heroes-web/index.html" class="program-card">
+                    <div class="card-thumb"
+                        style="background:#ff9800; display:flex; align-items:center; justify-content:center;">
+                        <span style="font-size:4rem;">🍎</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="org-label">Educational Game</span>
+                        <h3 class="card-title">Food Heroes (قهرمانان خوراکی)</h3>
+                        <p class="card-desc">
+                            A fun, interactive journey to the Planet of Health. Learn about nutrition and healthy
+                            choices. (Persian Language)
+                        </p>
+                        <div class="card-footer">
+                            <span>For Kids</span>
+                            <span>Play Now <i class="fas fa-play"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Protein Catcher Game -->
+                <a href="protein_game.html" class="program-card">
+                    <div class="card-thumb"
+                        style="background:#0a192f; display:flex; align-items:center; justify-content:center;">
+                        <span style="font-size:4rem;">🧬</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="org-label">Simulation</span>
+                        <h3 class="card-title">Protein Catcher</h3>
+                        <p class="card-desc">
+                            Test your reflexes and catch the correct amino acids to build a stable protein structure.
+                        </p>
+                        <div class="card-footer">
+                            <span>Bioinformatics</span>
+                            <span>Play Now <i class="fas fa-play"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Qziist Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
