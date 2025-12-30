@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | Qziist</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .program-card {
+            background: white;
+            border-left: 4px solid var(--color-secondary);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .program-card h3 {
+            color: var(--color-primary);
+            margin-top: 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0f7fa;
+            color: #006064;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/qzist-transparent.png" alt="Qziist Logo">
+                <span>Qziist</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="programs.html" class="nav-link">Programs</a>
+                <a href="collaboration.html" class="nav-link">Collaboration</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link btn btn-primary">Apply Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Research & Training Programs</h2>
+                <p>Comprehensive training modules aimed at developing real-world skills in bioinformatics and
+                    computational biology.</p>
+            </div>
+
+            <div class="program-card">
+                <h3><i class="fas fa-laptop-code" style="color: var(--color-secondary); margin-right: 10px;"></i>
+                    Project-Based Bioinformatics Training</h3>
+                <div style="margin: 1rem 0;">
+                    <span class="tag">MSc Students</span>
+                    <span class="tag">PhD Candidates</span>
+                    <span class="tag">Beginner to Advanced</span>
+                </div>
+                <p>
+                    A structured learning path where students tackle specific biological problems using computational
+                    tools.
+                    Training covers sequence analysis, structural modeling, and data interpretation.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <h3><i class="fas fa-handshake" style="color: var(--color-secondary); margin-right: 10px;"></i>
+                    Collaborative Research Internship</h3>
+                <div style="margin: 1rem 0;">
+                    <span class="tag">Publication Track</span>
+                    <span class="tag">Mentorship</span>
+                    <span class="tag">Long-term</span>
+                </div>
+                <p>
+                    Designed for students seeking authorship in scientific journals.
+                    Selected candidates join ongoing research projects, contributing to data generation, analysis, and
+                    manuscript preparation under expert supervision.
+                </p>
+            </div>
+
+            <div class="text-center" style="margin-top: 4rem;">
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Not sure which path is right for you?</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us for Guidance</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Qziist</h3>
+                    <p>A premier research and training initiative dedicated to pharmaceutical biotechnology and
+                        bioinformatics.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Training Programs</a></li>
+                        <li><a href="projects.html">Publications</a></li>
+                        <li><a href="ethics.html">Research Ethics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="hub.html">Knowledge Hub</a></li>
+                        <li><a href="mailto:info@qziist.com">info@qziist.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Qziist. All rights reserved. | Scientific Integrity First.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
